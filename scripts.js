@@ -8,30 +8,60 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleModeBtn.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
         if (body.classList.contains("dark-mode")) {
-            toggleModeBtn.textContent = "☀️";
+            toggleModeBtn.textContent = "🌙";
             body.style.backgroundColor = "#222";
             body.style.color = "white";
         } else {
-            toggleModeBtn.textContent = "🌙";
+            toggleModeBtn.textContent = "☀️";
             body.style.backgroundColor = "#f5f5f5";
             body.style.color = "black";
         }
     });
 
     // Mock Complaints Data
-    const complaints = [
-        { id: 1, title: "Potholes in Main Street", description: "Large potholes causing accidents." },
-        { id: 2, title: "Streetlights Not Working", description: "Dark streets making it unsafe at night." },
-        { id: 3, title: "Garbage Overflow", description: "Waste not collected for a week." }
-    ];
+/* script.js */
+const complaintsData = [
+    {
+        id: 1,
+        user: "John Doe",
+        time: "2h ago",
+        text: "Pothole on Main Street causing traffic issues!",
+        upvotes: 12,
+        comments: 3,
+    },
+    {
+        id: 2,
+        user: "Jane Smith",
+        time: "5h ago",
+        text: "Streetlight not working near Elm Park. It's very dark at night!",
+        upvotes: 8,
+        comments: 2,
+    },
+];
 
-    complaints.forEach(complaint => {
-        const card = document.createElement("div");
-        card.classList.add("complaint-card");
-        card.innerHTML = `<h4>${complaint.title}</h4><p>${complaint.description}</p>`;
-        postsContainer.appendChild(card);
+const complaintsContainer = document.getElementById("complaints");
+
+function renderComplaints() {
+    complaintsContainer.innerHTML = "";
+    complaintsData.forEach((complaint, index) => {
+        const complaintElement = document.createElement("div");
+        complaintElement.className = "complaint";
+        complaintElement.innerHTML = `
+            <p><strong>${complaint.user}</strong> - <span>${complaint.time}</span></p>
+            <p>${complaint.text}</p>
+            <button class="button" onclick="upvote(${index})">👍 ${complaint.upvotes}</button>
+            <button class="button">💬 ${complaint.comments} Comments</button>
+        `;
+        complaintsContainer.appendChild(complaintElement);
     });
+}
 
+function upvote(index) {
+    complaintsData[index].upvotes++;
+    renderComplaints();
+}
+
+renderComplaints();
     // Mock Resolved Cases Data
     const resolvedCases = [
         "Fixed Potholes in Main Street",
