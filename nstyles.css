@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #767676d8; /* Adjust for the size of the stripes/ribs */
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.main-header, .nav-header, .main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+.login-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    display: flex;
+    align-items: left;
+}
+
+.login-btn svg{
+    fill: none;
+    stroke: #ffffff;
+    margin-right: 0.3125rem; /* 5px -> 0.3125rem */
+    height: 1.95rem; /* 24px -> 1.5rem */
+    flex-direction:column; 
+    align-items: center;
+}
+.nav-btn{
+    border-radius: 0px;
+}
+.divider {
+    margin: 0;
+    border: none;
+    padding: 2.5px;
+}
+.nav-header {
+    justify-content: center;
+}
+.nav-btn, .toggle-mode {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.content {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+.left-section {
+    flex: 3;
+    background: white;
+    padding: 20px;
+    overflow-y: none;
+    height: 500px;
+    min-width: 60%;
+}
+.post-container {
+    flex: 3;
+    background: white;
+    padding: 20px;
+    overflow-y: auto;
+    height: 500px;
+}
+
+.right-section {
+    flex: 1;
+    background: #eee;
+    padding: 20px;
+    min-width: 35%;
+}
+footer {
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 3.125rem;
+    margin-bottom: 0.625rem;
+    align-items: center;
+}
+
+.footer-logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-logo p {
+    margin-top: 0.3125rem;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.genres ul, .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.genres ul li, .footer-links ul li {
+    display: inline;
+    margin: 0 0.9375rem;
+}
+
+.footer-links ul li a {
+    color: gold;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}

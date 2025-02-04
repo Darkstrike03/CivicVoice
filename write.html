@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Civic Voice</title>
+    <link rel="stylesheet" href="nstyles.css">
+    <script defer src="nscripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="logo"> <img src="assets/logo.png" alt="Civic Voice Logo" width="50px" length="50px" > <h2>Civic Voice</h2> </div>
+            <button class="login-btn">
+                <svg width="24px" viewbox="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 7.13193V6.61204C7 4.46614 7 3.3932 7.6896 2.79511C8.37919 2.19703 9.44136 2.34877 11.5657 2.65224L15.8485 3.26408C18.3047 3.61495 19.5327 3.79039 20.2664 4.63628C21 5.48217 21 6.72271 21 9.20377V14.7962C21 17.2773 21 18.5178 20.2664 19.3637C19.5327 20.2096 18.3047 20.385 15.8485 20.7359L11.5657 21.3478C9.44136 21.6512 8.37919 21.803 7.6896 21.2049C7 20.6068 7 19.5339 7 17.388V17.066" />
+                    <path d="M16 12L16.3904 11.6877L16.6403 12L16.3904 12.3123L16 12ZM4 12.5C3.72386 12.5 3.5 12.2761 3.5 12C3.5 11.7239 3.72386 11.5 4 11.5V12.5ZM12.3904 6.68765L16.3904 11.6877L15.6096 12.3123L11.6096 7.31235L12.3904 6.68765ZM16.3904 12.3123L12.3904 17.3123L11.6096 16.6877L15.6096 11.6877L16.3904 12.3123ZM16 12.5H4V11.5H16V12.5Z" fill="none"/>
+                    </svg></button>
+        </header>
+        <hr class="divider">
+        <!-- Navigation -->
+        <nav class="nav-header">
+            <div class="tab" data-tab="Home"><button class="nav-btn">Home</button></div>
+            <div class="tab-active" data-tab="Post"><button class="nav-btn" onclick="goToIndex()" >Post</button></div>
+            <div class="tab" data-tab="Popular"><button class="nav-btn">Popular</button></div>
+            <div class="tab" data-tab="New"><button class="nav-btn">New</button></div>
+            <div class="tab" data-tab="Write"><button class="nav-btn" style="border-bottom: 2.5px solid #1b11e3bb">Write</button></div>
+            <div class="tab" data-tab="Home"><button class="toggle-mode">🌥️</button></div>
+        </nav>
+        
+        <!-- Main Body -->
+        <main class="content">
+            <!-- Left Section -->
+                <div class="post-container">
+                    <style>
+                                                    h2 {
+                                text-align: center;
+                            }
+                            form {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            input, textarea, select, button {
+                                margin: 10px 0;
+                                padding: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 5px;
+                            }
+                            button {
+                                background-color: #007bff;
+                                color: white;
+                                cursor: pointer;
+                            }
+                            button:hover {
+                                background-color: #0056b3;
+                            }
+                            .fcontainer {
+                                max-width: 600px;
+                                margin: auto;
+                                background: white;
+                                padding: 20px;
+                                border-radius: 8px;
+                                box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+                            }
+                            .complaint {
+                                border-bottom: 1px solid #ddd;
+                                padding: 10px 0;
+                            }
+                            .button {
+                                background: none;
+                                border: none;
+                                cursor: pointer;
+                                color: blue;
+                                margin-right: 10px;
+                            }
+
+                    </style>
+                    <h2>Submit a Complaint</h2>
+                    <form id="postForm">
+                        <input type="text" id="name" placeholder="Name">
+                        <input type="text" id="postTitle" placeholder="Title" required>
+                        <textarea id="postDescription" placeholder="Describe your complaint..." required></textarea>
+                        <input type="file" id="postImage" accept="image/*">
+                        <select id="postCategory">
+                            <option value="Road Issue">Road Issue</option>
+                            <option value="Electricity">Electricity</option>
+                            <option value="Water Supply">Water Supply</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <button type="submit">Post</button>
+                    </form>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Logo">
+                    <h2>Civic Voice</h2>
+                    <p>Speak. Upvote. Resolve.</p>
+                </div>
+               
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <p>&copy; 2024 Arcadia. All rights reserved.</p>
+            </div>
+        
+        </footer>
+    </div>
+</body>
+</html>
