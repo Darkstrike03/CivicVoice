@@ -64,11 +64,17 @@
                
                 <div class="footer-links">
                     <ul>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="#" id="aboutUsLink">About Us</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
+                    <script>
+                        document.getElementById('aboutUsLink').addEventListener('click', function(event) {
+                            event.preventDefault();
+                            window.open('about.html', 'About Us', 'width=600,height=400');
+                        });
+                    </script>
                 </div>
                 <p>&copy; 2024 Arcadia. All rights reserved.</p>
             </div>
