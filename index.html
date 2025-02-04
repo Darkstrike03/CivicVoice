@@ -25,11 +25,12 @@
         <hr class="divider">
         <!-- Navigation -->
         <nav class="nav-header">
-            <button class="nav-btn">Home</button>
-            <button class="nav-btn" style="border-bottom: 2.5px solid #1b11e3bb">Post</button>
-            <button class="nav-btn">Popular</button>
-            <button class="nav-btn">New</button>
-            <button class="toggle-mode">🌥️</button>
+            <div class="tab" data-tab="Home"><button class="nav-btn">Home</button></div>
+            <div class="tab-active" data-tab="Post"><button class="nav-btn" style="border-bottom: 2.5px solid #1b11e3bb">Post</button></div>
+            <div class="tab" data-tab="Popular"><button class="nav-btn">Popular</button></div>
+            <div class="tab" data-tab="New"><button class="nav-btn">New</button></div>
+            <div class="tab" data-tab="Write"><button class="nav-btn" onclick="goToWrite()">Write</button></div>
+            <div class="tab" data-tab="Home"><button class="toggle-mode">🌥️</button></div>
         </nav>
         
         <!-- Main Body -->
@@ -52,7 +53,6 @@
                 </ul>
             </aside>
         </main>
-        
         <!-- Footer -->
         <footer>
             <div class="footer-container">
