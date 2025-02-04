@@ -1,3 +1,6 @@
+function goToWrite() {
+    window.location.href = 'write.html'; // Replace 'login.html' with the actual login page URL
+}
 document.addEventListener("DOMContentLoaded", () => {
     const toggleModeBtn = document.querySelector(".toggle-mode");
     const body = document.body;
